@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Dappled Root Atelier</title>
+    <style>
+        :root {
+            --sky-blue: #87CEEB;
+            --deep-azure: #0076A3;
+            --cloud-white: #F0F8FF;
+            --leaf-green: #4F7942;
+            --text-gray: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            color: var(--text-gray);
+            margin: 0;
+            background-color: var(--cloud-white);
+        }
+
+        header {
+            background-color: var(--sky-blue);
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+            border-bottom: 5px solid var(--deep-azure);
+        }
+
+        nav {
+            background: white;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--deep-azure);
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+
+        h2 { color: var(--deep-azure); border-left: 5px solid var(--sky-blue); padding-left: 15px; }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 30px;
+            margin-top: 2rem;
+        }
+
+        .content-block {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        /* Form Styling */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: var(--deep-azure);
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box; /* Ensures padding doesn't affect width */
+            font-family: inherit;
+        }
+
+        textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background-color: var(--deep-azure);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--leaf-green);
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid { grid-template-columns: 1fr; }
+        }
+
+        footer {
+            background-color: var(--sky-blue);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 5rem;
+        }
+
+        .footer-info { font-style: italic; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Get in Touch</h1>
+    <p>Let’s start cultivating your dream space</p>
+</header>
+
+<nav>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="terms.html">Terms</a></li>
+    <li><a href="privacy.html">Privacy</a></li>
+    <li><a href="cookies.html">Cookies</a></li>
+</nav>
+
+<div class="container">
+    <div class="contact-grid">
+        <!-- Contact Info -->
+        <aside>
+            <div class="content-block">
+                <h2>The Atelier</h2>
+                <p>
+                    <strong>Address:</strong><br>
+                    1224 Cerulean Way<br>
+                    Sky Harbor District<br>
+                    Portland, OR 97201
+                </p>
+                <p>
+                    <strong>Email:</strong><br>
+                    hello@dappledroot.com
+                </p>
+                <p>
+                    <strong>Phone:</strong><br>
+                    (555) 012-8844
+                </p>
+                <p>
+                    <strong>Studio Hours:</strong><br>
+                    Mon - Fri: 9:00 AM - 5:00 PM<br>
+                    Sat: By Appointment Only
+                </p>
+            </div>
+        </aside>
+
+        <!-- Contact Form -->
+        <main class="content-block">
+            <h2>Send a Message</h2>
+            <form action="#">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="email@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Nature of Inquiry</label>
+                    <input type="text" id="subject" name="subject" placeholder="e.g. Garden Design, Consultation">
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Vision</label>
+                    <textarea id="message" name="message" placeholder="Tell us about your space..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </main>
+    </div>
+</div>
+
+<footer>
+    <h3>Dappled Root Atelier</h3>
+    <p class="footer-info">
+        1224 Cerulean Way, Sky Harbor District, Portland, OR 97201<br>
+        Contact: (555) 012-8844
+    </p>
+    <p>&copy; 2026 Dappled Root Atelier. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
